@@ -5,123 +5,156 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--estiloMenu-->
+    
     <style>
-        /*Elimina los margenes y paddings que agrega el navegador*/
-        * {
-        padding: 0;
-        margin: 0;
-        }
-        /*Agrega margenes inferiores a los parrafos*/
-        p {
-        margin-bottom: 20px;
-        }
-        .wrapper {
-        width: 80%;
-        margin: auto;
-        overflow:hidden;
-        }
-        header {
-        background: rgba(0,0,0,0.9);
-        width: 100%;
-        position: fixed;
-        z-index: 10;
+        h2{
+        font-family: Verdana;
+        color: #ddfcfc;
+        text-align: center;
+        background-color: #038C8C;
         }
 
-        nav {
-        float: left; /* Desplaza el nav hacia la izquierda */
-        }
-        nav ul {
-        list-style: none;
-        overflow: hidden; /* Limpia errores de float */
-        }
-        nav ul li {
-        float: left;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        }
-        nav ul li a {
-        display: block; /* Convierte los elementos a en elementos bloque para manipular el padding */
-        padding: 20px;
-        color: #fff;
-        text-decoration: none;
-        }
-        nav ul li:hover {
-        background: #3ead47;
-        }
-        .contenido {
-        padding-top: 80px;
+        h3{
+            font-family: Verdana;
+            color: #111111;
         }
 
-    </style>
-    <!--Carrusel-->
-    <style>
-        .slider {
-        width: 95%;
-        margin: auto;
-        overflow: hidden;
+        p{
+            font-family: Verdana;
+            color: #262626;
+            font-size: large;
         }
 
-        .slider ul {
-        display: flex;
-        padding: 0;
-        width: 400%;
-        
-        animation: cambio 20s infinite alternate linear;
-        }   
-
-        .slider li {
-        width: 100%;
-        list-style: none;
+        li{
+            font-family: Verdana;
+            color: #262626;
+            font-size: large;
         }
 
-        .slider img {
-        width: 100%;
+        th{
+            font-family: Verdana;
+            color: #111111;
         }
 
-        @keyframes cambio {
-        0% {margin-left: 0;}
-        20% {margin-left: 0;}
-        
-        25% {margin-left: -100%;}
-        45% {margin-left: -100%;}
-        
-        50% {margin-left: -200%;}
-        70% {margin-left: -200%;}
-        
-        75% {margin-left: -300%;}
-        100% {margin-left: -300%;}
+        fieldset{
+            border-color: #d63900;
+            margin-top: 1em;
+            background-color: #effc00;
+        }
+
+        legend{
+            border:2px solid #f84f00;
+            font-family: Verdana;
+            border-radius:8px;
+            font-size: large;
+            color: #000000;
+            background-color: #ffee00;
+        }
+
+        #presentacion{
+            margin: 10px;
+            width: 19em;
+            float: left;
+            height: 98%;
+            background-color: #fdad00;
+        }
+
+        #contenido { 
+            margin: 10px;
+            width: calc(100% - 22em);
+            float: right;
+        }
+
+        .col{
+            padding: 0px 10px;
+            margin: 0px 10px;
+        }
+
+        #idioma{
+            display: flex;
+        }
+
+        .redes{
+            display: flex;
+            justify-content: center;
+        }
+
+        .perfil{
+            display: flex;
+            justify-content: center;
+        }
+
+        .redes a{
+            margin: 10px 14px;
+            top: 50%;
+        }
+
+        .redes p{
+            display: block;
+            margin: 5px;
+        }
+
+        p{
+            margin: 10px 0px;
         }
     </style>
     
 </head>
 <body>
-    <header>
-        <section class="wrapper">
-              <nav>
-                  <ul>
-                      <li><a href="#">Inicio</a></li>
-                      <li><a href="#">Tutoriales</a></li>
-                      <li><a href="#">Noticias</a></li>
-                      <li><a href="#">Preguntas?</a></li>
-                      <li><a href="#">Contactos</a></li>
-                  </ul>
-          </nav>
-          </section>
-          <section>
-            <div class="slider">
-                <ul>
-                    <li>
-                    <img src="https://images6.alphacoders.com/106/1069078.jpg" alt="">
-                    </li>
-                                    <li>
-                    <img src="https://images5.alphacoders.com/103/1035160.jpg" alt="">
-                    </li>
-                                    <li>
-                    <img src="https://images6.alphacoders.com/104/1049898.jpg" alt="">
-                    </li>
-                </ul>
+    <section id="presentacion">
+        <H2>Aldair Quispe Flores</H2>
+        <div class="perfil">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width="200">
+        </div>
+
+        <fieldset>
+            <legend><strong>Datos Personales</strong></legend>
+            <p><strong>Correo:</strong> <a>abcdef@gmail.com</a> </p>
+            <p><strong>Edad:</strong> 21 años</p>
+            <p><strong>Ciudad:</strong> Bolivia</p>
+            <section class="redes">
+            <p><strong>Redes sociales:</strong></p>
+                <a><img src="https://simg.nicepng.com/png/small/137-1372421_redes-sociales-logos-png-iconos-de-servicios-de.png" width="30"/></a>
+                <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBDRqAWLWrG45RURLEdYlEZI769aDXhr6iWg&usqp=CAU" width="30"/></a>
+            </section>
+        </fieldset>
+    </section>
+
+    <section id="contenido">
+        <fieldset>
+            <legend><strong>Datos Del Estudiante</strong></legend>
+            <h3>Ingenieria de Sistemas</h3>
+            <p>C.I: 0000000</p>
+            <h3>Universidad: Unviersidad Privada Domingo Savio</h3>
+            <p>Fecha de Nacimiento: DD/MM/AA</p>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Idiomas</strong></legend>
+            <div id="idioma">
+                <div class="col">
+                    <h3>Español</h3>
+                    <p>Nivel nativo</p>
+                </div>
             </div>
-    </header>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Herramientas</strong></legend>
+            <table>
+                <tr>
+                    <th scope="col"><strong>Lenguajes de programación</strong></th>
+
+                <tr>
+                    <td>
+                        <li>C++</li>
+                        <li>C#</li>
+                    </td>
+
+                </tr>
+
+            </table>
+        </fieldset>
+    </section>
 </body>
 </html>
