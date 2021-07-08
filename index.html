@@ -7,67 +7,121 @@
     <title>Document</title>
     <!--estiloMenu-->
     <style>
-        #menu ul li {
-        background-color:#2e518b;
+        /*Elimina los margenes y paddings que agrega el navegador*/
+        * {
+        padding: 0;
+        margin: 0;
+        }
+        /*Agrega margenes inferiores a los parrafos*/
+        p {
+        margin-bottom: 20px;
+        }
+        .wrapper {
+        width: 80%;
+        margin: auto;
+        overflow:hidden;
+        }
+        header {
+        background: rgba(0,0,0,0.9);
+        width: 100%;
+        position: fixed;
+        z-index: 10;
         }
 
-        #menu ul {
-        list-style:none;
-        margin:0;
-        padding:0;
+        nav {
+        float: left; /* Desplaza el nav hacia la izquierda */
+        }
+        nav ul {
+        list-style: none;
+        overflow: hidden; /* Limpia errores de float */
+        }
+        nav ul li {
+        float: left;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        }
+        nav ul li a {
+        display: block; /* Convierte los elementos a en elementos bloque para manipular el padding */
+        padding: 20px;
+        color: #fff;
+        text-decoration: none;
+        }
+        nav ul li:hover {
+        background: #3ead47;
+        }
+        .contenido {
+        padding-top: 80px;
         }
 
-        #menu ul a {
-        display:block;
-        color:#fff;
-        text-decoration:none;
-        font-weight:400;
-        font-size:15px;
-        padding:10px;
-        font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform:uppercase;
-        letter-spacing:1px;
+    </style>
+    <!--Carrusel-->
+    <style>
+        .slider {
+        width: 95%;
+        margin: auto;
+        overflow: hidden;
         }
 
-        #menu ul li {
-        position:relative;
-        float:left;
-        margin:0;
-        padding:0;
+        .slider ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        
+        animation: cambio 20s infinite alternate linear;
+        }   
+
+        .slider li {
+        width: 100%;
+        list-style: none;
         }
 
-        #menu ul ul {
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        padding:0;
+        .slider img {
+        width: 100%;
         }
-        #menu ul li:hover > ul {
-        display:block;
+
+        @keyframes cambio {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+        
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
         }
     </style>
     
 </head>
 <body>
     <header>
-        <div>
-        <nav id="menu">
-        <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Enlace 2</a>
-            <ul>
-            <li><a href="#">Enlace 2.1</a></li>
-            <li><a href="#">Enlace 2.2</a></li>
-            <li><a href="#">Enlace 2.3</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Enlace 3</a></li>
-        <li><a href="#">Enlace 4</a></li>
-        <li><a href="#">Enlace 5</a></li>
-        </ul>
-        </nav>
-    </div>
+        <section class="wrapper">
+              <nav>
+                  <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Tutoriales</a></li>
+                      <li><a href="#">Noticias</a></li>
+                      <li><a href="#">Preguntas?</a></li>
+                      <li><a href="#">Contactos</a></li>
+                  </ul>
+          </nav>
+          </section>
+          <section>
+            <div class="slider">
+                <ul>
+                    <li>
+                    <img src="https://images6.alphacoders.com/106/1069078.jpg" alt="">
+                    </li>
+                                    <li>
+                    <img src="https://images5.alphacoders.com/103/1035160.jpg" alt="">
+                    </li>
+                                    <li>
+                    <img src="https://images6.alphacoders.com/104/1049898.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
     </header>
 </body>
 </html>
